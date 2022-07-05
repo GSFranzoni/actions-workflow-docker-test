@@ -24,6 +24,7 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/actions-workflow-docker-test:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/actions-workflow-docker-test:${{ github.sha }}
   deploy: 
+    name: Deploying Application to Heroku 🚀
     needs: build
     runs-on: ubuntu-latest
     steps:
